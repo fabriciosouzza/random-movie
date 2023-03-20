@@ -15,4 +15,4 @@ Covered concepts:
 - CSS Media Queries
 - Promises (async/await function)
 - DOM Manipulation
-- API Consumption (fetch() method)
+- API Consumption (fetch method)
