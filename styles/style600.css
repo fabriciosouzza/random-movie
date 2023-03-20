@@ -1,0 +1,29 @@
+header {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    height: 50px;
+}
+
+#movie_title{
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+#movie_section {
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+    padding: 5px;
+    width: 85%;
+}
+
+#movie_info {
+    width: 95%;
+    padding: 10px;
+}
+
+.movie_poster {
+    margin-top: 15px;
+    width: 200px;
+    height: 300px;
+}
