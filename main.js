@@ -13,7 +13,7 @@ const newMovieButton = document.querySelector('.shuffle_button');
 newMovieButton.onclick = () => {
     let randomNumber = getRandom()
     newPoster(randomNumber)
-    
+
     newTitle(randomNumber)
     newSynopsis(randomNumber)
     newRating(randomNumber)
@@ -33,19 +33,30 @@ async function newTitle(movieId) {
 
 async function newSynopsis(movieId) {
     let synopsis =  await requestMovie(movieId)
-    movieSynopsis.textContent = synopsis.overview
+    if (synopsis.overview == undefined || synopsis.overview == null) {
+        movieSynopsis.textContent = "We couldn't find a movie, try again!"
+    } else {
+        movieSynopsis.textContent = synopsis.overview
+    }
 }
 
 async function newRating(movieId) {
     let rating =  await requestMovie(movieId)
-    let roundedRating = rating.vote_average.toFixed(2)
-    movieRating.textContent = `IMDb Rating: ${roundedRating}`
+    if (rating.vote_average == undefined || rating.vote_average == null) {
+        movieRating.textContent = ''
+    }
+    else {
+        let roundedRating = rating.vote_average.toFixed(2)
+        movieRating.textContent = `IMDb Rating: ${roundedRating}`
+    }
 }
 
 async function newPoster(movieId) {
     let poster =  await requestMovie(movieId)
-    let posterUrl = `https://image.tmdb.org/t/p/w500/${poster.poster_path}`
-    moviePoster.src = posterUrl
+    if (poster.poster_path == undefined || poster.poster_path == null) {
+        moviePoster.src = './assets/sad.svg'
+    } else {
+        let posterUrl = `https://image.tmdb.org/t/p/w500/${poster.poster_path}`
+        moviePoster.src = posterUrl
+    }
 }
-
-
