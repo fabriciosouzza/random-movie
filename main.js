@@ -47,7 +47,7 @@ async function newRating(movieId) {
     }
     else {
         let roundedRating = rating.vote_average.toFixed(2)
-        movieRating.textContent = `IMDb Rating: ${roundedRating}`
+        movieRating.textContent = `TMDb Rating: ${roundedRating}`
     }
 }
 
