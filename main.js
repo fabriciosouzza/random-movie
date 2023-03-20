@@ -5,7 +5,7 @@ async function requestMovie(movieId) {
 }
 
 function getRandom() {
-    return Math.floor(Math.random() * 5000) + 1;
+    return Math.floor(Math.random() * 100000) + 1;
 }
 
 const newMovieButton = document.querySelector('.shuffle_button');

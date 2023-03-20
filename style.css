@@ -83,7 +83,8 @@ main {
     border-radius: 6px;
     border-style: none;
 
-    background-color: #e9e8e8;
+    background-color: #3a1e5c;
+    color: #ffffff;
 
     font-family: 'Poppins';
     font-style: normal;
@@ -96,7 +97,7 @@ main {
 
 .shuffle_button:hover {
     cursor: pointer;
-    background-color: #d8d5d5;
+    background-color: #26143d;
 }
 
 .movie_poster:hover {
@@ -105,4 +106,5 @@ main {
 
 .header_img:hover {
     transform: scale(1.05);
+    cursor: pointer;
 }
